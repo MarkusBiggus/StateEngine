@@ -12,11 +12,11 @@ Imagine the pipeline twisted into a knot with splits and joins for fully dynamic
 The StateEngine allows multiple possible transitions from each state to one or more states, according to a state model.
 Each State is a class object that has the responsibility for executing the state logic and choosing which transition to emit
 when done. A state may be executed more than once, until it emits a transition.
-The engine dispatch cycle runs each state in according to the transitions they emit until the Terminal state is active.
+The engine dispatch cycle runs each state in according to the transitions they emit until the Terminal state is executed.
 Two dispatch cycles with no transition emitted or state changes will stall the workflow with a Runtime Exception.
 
 If all states in a model have only a single transition choice, the state does not need to emit the transition, it will behave like a pipeline.
-The 'Split' (single) transition allows a pipeline to branch multiple paths, each a pipeline running in parrallel. 
+The 'Split' transition allows a pipeline to branch multiple paths, each a pipeline running in parallel. 
 A state with no transition choice will end a path.
 
 
@@ -38,6 +38,15 @@ Use Composer to install the package and all necessary dependencies.
 ```
 composer require markusbiggus/stateengine
 ```
+### Running tests
+
+Publish tests before running.
+
+```
+ php artisan vendor:publish --provider="MarkusBiggus\StateEngine\StateEngineProvider"
+ php artisn test
+```
+
 ## MIT License
 Copyright (c) 2024 Mark Charles
 

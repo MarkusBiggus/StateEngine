@@ -1,0 +1,54 @@
+{
+    "name": "markusbiggus/stateengine",
+    "version": "1.0.0",
+    "description": "Finite state automata engine",
+    "license": "MIT",
+    "homepage": "https://github.com/markusbiggus/stateengine",
+    "keywords": ["laravel", "workflow", "automata", "state model", "pipeline", "state engine"],
+    "authors": [
+        {
+            "name": "Mark Charles",
+            "email": "markusbiggus@icloud.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.3",
+        "laravel/framework": "^10.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.28",
+        "phpunit/phpunit": "^10.1",
+        "pestphp/pest-plugin-laravel": "^2.3",
+        "dms/phpunit-arraysubset-asserts": "^0.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MarkusBiggus\\StateEngine\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { "MarkusBiggus\\StateEngine\\Tests\\" : "vendor/markusbiggus/stateengine/tests" }
+    },
+    "extra": {
+        "branch-alias": {
+            "release": "1.0.0"
+        },
+        "laravel": {
+            "providers": [
+                "MarkusBiggus\\StateEngine\\StateEngineProvider"
+            ],
+            "aliases": {
+                "DynoFlow": "MarkusBiggus\\StateEngine\\Facades\\DynoFlow"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

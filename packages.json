@@ -1,0 +1,15 @@
+{
+    "packages": {
+        "markusbiggus/stateengine": {
+            "1.0.0": {
+                "name": "markusbiggus/stateengine",
+                "description": "Finite State Automata Engine",
+                "version": "1.0.0",
+                "dist": {
+                    "type": "composer",
+                    "url": "https://github.com/markusbiggus/stateengine"
+                }
+            }
+        }
+    }
+}

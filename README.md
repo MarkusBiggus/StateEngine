@@ -44,7 +44,7 @@ Publish tests before running.
 
 ```
  php artisan vendor:publish --provider="MarkusBiggus\StateEngine\StateEngineProvider"
- php artisn test
+ php artisan test
 ```
 
 ## MIT License

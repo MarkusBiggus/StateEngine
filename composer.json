@@ -27,13 +27,7 @@
             "MarkusBiggus\\StateEngine\\": "src"
         }
     },
-    "autoload-dev": {
-        "psr-4": { "MarkusBiggus\\StateEngine\\Tests\\" : "vendor/markusbiggus/stateengine/tests" }
-    },
     "extra": {
-        "branch-alias": {
-            "release": "1.0.0"
-        },
         "laravel": {
             "providers": [
                 "MarkusBiggus\\StateEngine\\StateEngineProvider"
